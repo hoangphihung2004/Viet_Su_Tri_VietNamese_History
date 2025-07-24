@@ -1,0 +1,36 @@
+/* Enhanced Menu Hover Effects - Perfect Alignment */
+.menu-item {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.menu-item:first-child {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+}
+
+.menu-item:last-child {
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+.menu-item:hover {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #f59e0b !important;
+    transform: translateX(0) !important;
+    box-shadow: inset 4px 0 0 rgba(245, 158, 11, 0.8) !important;
+}
+
+.menu-item.active {
+    background: rgba(245, 158, 11, 0.25) !important;
+    color: #f59e0b !important;
+    font-weight: 600 !important;
+    box-shadow: inset 4px 0 0 rgba(245, 158, 11, 1) !important;
+}
+
+.clear-submenu-item:hover {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #f59e0b !important;
+    transform: translateX(0) !important;
+    box-shadow: inset 3px 0 0 rgba(245, 158, 11, 0.6) !important;
+}

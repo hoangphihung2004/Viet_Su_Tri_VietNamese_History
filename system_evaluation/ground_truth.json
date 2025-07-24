@@ -1,0 +1,448 @@
+[
+    {
+        "Question": "Hoàng Hối Khanh là ia",
+        "Ground_Truth": [
+            "https://vi.wikipedia.org/wiki/Ho%C3%A0ng_H%E1%BB%91i_Khanh"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Tóm tắt chi tiết phó cổ Hội an",
+        "Ground_Truth": [
+            "https://dsvh.gov.vn/di-tich-kien-truc-nghe-thuat-do-thi-co-hoi-an-2942",
+            "https://vi.wikipedia.org/wiki/Ph%E1%BB%91_c%E1%BB%95_H%E1%BB%99i_An"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "có bao nhiêu tran bach Dằng",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-nhat-nam-938",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-ba-nam-1288",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-hai-nam-981"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "liệt kê các thời Kỳ bắc thuọc",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-nhat",
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-tu",
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-hai",
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-ba"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "xin chao",
+        "Ground_Truth": null,
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Lê thái Tổ và Le lợi có mối quan hệ như thế nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-hau-le/le-thai-to-le-loi"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "năm 938 xảy ra sự kiện gì",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/ngo-quyen",
+            "https://nguoikesu.com/dong-lich-su/nha-ngo",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-nhat-nam-938"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "ai là người lãnh đạo chống quân nguyên mông",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/chien-tranh-nguyen-mong-dai-viet-lan-2",
+            "https://nguoikesu.com/tu-lieu/quan-su/chien-tranh-nguyen-mong-dai-viet-lan-3",
+            "https://nguoikesu.com/tu-lieu/quan-su/chien-tranh-nguyen-mong-dai-viet-lan-1"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "có bao nhiêu giai đoạn trong thời kỳ bắc thuộc lần 1",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-nhat"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "có bao nhiêu giai đoạn trong thời kỳ bắc thuộc lần 2",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-hai"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Ngũ Hành sơn ở đâu",
+        "Ground_Truth": [
+            "https://vi.wikipedia.org/wiki/Ng%C5%A9_H%C3%A0nh_S%C6%A1n"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "tóm tắt nhân vật duy Tân",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/duy-tan"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Đinh Phế Đế - Đinh Toàn thọ bao lâu",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-dinh/dinh-phe-de-dinh-toan"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "diễn biến Trận Biên Hòa năm 1861-1862",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bien-hoa-nam-1861-1862"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "xin chao",
+        "Ground_Truth": null,
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Trưng Nữ Vương là vợ ai",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/trung-nu-vuong"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "thaayf vu la ai",
+        "Ground_Truth": null,
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "vua đầu tiên của Nhà Hồ",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/nha-ho"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Pháp Thuộc trong thời kì nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/phap-thuoc"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "kết quả của Trận Sơn Tây năm 1883",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-son-tay-nam-1883"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Hai Bà Trưng ở ngôi bao lâu",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/hai-ba-trung"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "quan hệ của Nhà Lý và Nhà Triệu",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-ly-va-nha-trieu"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "chiến thắng điện biên phủ vào năm bao nhiêu",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/chien-dich-dien-bien-phu-nam-1954"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Nhà Nguyễn thành lâp năm bao nhiêu",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/le-chieu-thong"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "ngày sinh của Lý Tồn Úc",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/ly-ton-uc"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Di tích lịch sử Đền thờ Nguyễn Bỉnh Khiêm nằm ở đâu",
+        "Ground_Truth": [
+            "https://dsvh.gov.vn/di-tich-lich-su-de%CC%80n-tho%CC%80-nguye%CC%83n-bi%CC%89nh-khiem-2993"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Xe tăng T54B số hiệu 843 là gì",
+        "Ground_Truth": [
+            "https://dsvh.gov.vn/xe-tang-t54b-so-hieu-843-3036",
+            "https://dsvh.gov.vn/bao-vat-quoc-gia-1758",
+            "https://dsvh.gov.vn/di-tich-lich-su-dinh-doc-lap-2937"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Lê Tân mất khi nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/le-tan"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Lê Chân Tông - Lê Duy Hựu có quan he như thế nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/le-chan-tong",
+            "https://nguoikesu.com/dong-lich-su/trinh-nguyen-phan-tranh/nha-le-trung-hung/le-chan-tong-le-duy-huu"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Vua Quang Trung thống nhất nhà Tây Sơn và dựng nước vào năm nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-tay-son/vua-quang-trung-thong-nhat-nha-tay-son-va-dung-nuoc"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "diễn biến của Trận Tuyên Quang năm 1884",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-tuyen-quang-nam-1884"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Trận Đà Nẵng năm 1858-1859 lý do, tiểu dẫn",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-da-nang-nam-1858-1859"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Nhà Ngô trị vì bao lâu",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-ngo"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Trịnh Nguyễn Phân Tranh như thế nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/trinh-nguyen-phan-tranh"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "bac thuoc lần 2 trong bao lau",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/phap-thuoc"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Học AI ra có thất nghiệp không",
+        "Ground_Truth": null,
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "bùi cao vũ",
+        "Ground_Truth": null,
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Chiến dịch Ba Gia năm 1965 diễn biến như thế nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/chien-dich-ba-gia-nam-1965"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "duong Đinh Nghệ chết như thế nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/thoi-ky-xay-nen-tu-chu/duong-dinh-nghe"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Lý Thánh Tông vaf lý Nhat Tôn có mẹ là ai",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-ly/ly-thanh-tong-ly-nhat-ton"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "thoong tin ve kyf hoongf bangf thij",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/hong-bang-va-van-lang/ky-hong-bang-thi",
+            "https://nguoikesu.com/dong-lich-su/hong-bang-va-van-lang"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "ai lãnh đạo trận bạch đằng",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-ba-nam-1288",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-nhat-nam-938",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-hai-nam-981"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "cụm nhà cổ thanh Phu Long mang kiến trúc gì",
+        "Ground_Truth": [
+            "https://vi.wikipedia.org/wiki/C%E1%BB%A5m_nh%C3%A0_c%E1%BB%95_Thanh_Ph%C3%BA_Long"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Bình đồng Đông Sơn có giá trị lịch sử như thế nào",
+        "Ground_Truth": [
+            "https://dsvh.gov.vn/binh-dong-dong-son-an-bien-hai-phong-22153"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "lễ hội cầu mưa diễn ra ở đâu và khi nào",
+        "Ground_Truth": [
+            "https://dsvh.gov.vn/le-hoi-cau-mua-tinh-hung-yen-3448"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "so sánh sự khác nhau giữa Kỳ Hồng Bàng thị và kỷ nhà thục",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/hong-bang-va-van-lang/ky-hong-bang-thi",
+            "https://nguoikesu.com/dong-lich-su/au-lac-va-nam-viet/ky-nha-thuc"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "so sánh sự khác nhau giữa nhà ngô và nhà lý",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/nha-ly",
+            "https://nguoikesu.com/dong-lich-su/nha-ngo",
+            "https://nguoikesu.com/nhan-vat/nha-ly"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "so sánh sự khác nhau giữa các trận bạch đằng",
+        "Ground_Truth": [
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-ba-nam-1288",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-hai-nam-981",
+            "https://nguoikesu.com/tu-lieu/quan-su/tran-bach-dang-lan-thu-nhat-nam-938"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "so sánh các thời kỳ bắc thuộc có gì khác nhau",
+        "Ground_Truth": [
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-ba",
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-tu",
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-nhat",
+            "https://nguoikesu.com/dong-lich-su/bac-thuoc-lan-thu-hai"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "ATK2 có lịch sử như thế nào",
+        "Ground_Truth": [
+            "https://vi.wikipedia.org/wiki/ATK2"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Khu lưu niệm Đại thi hào Nguyễn Du được xây dựng như thế nào",
+        "Ground_Truth": [
+            "https://vi.wikipedia.org/wiki/Khu_l%C6%B0u_ni%E1%BB%87m_%C4%90%E1%BA%A1i_thi_h%C3%A0o_Nguy%E1%BB%85n_Du"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Di tích lịch sử Đền thờ Nguyễn Bỉnh Khiêm nằm ở đâu",
+        "Ground_Truth": [
+            "https://dsvh.gov.vn/di-tich-lich-su-dèn-thò-nguyẽn-bỉnh-khiem-2993"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "Kinh Nam có tiểu sử như thế nào",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/kinh-nam"
+        ],
+        "URL": null,
+        "Time": null
+    },
+    {
+        "Question": "ngày sinh của Lý Tồn Úc",
+        "Ground_Truth": [
+            "https://nguoikesu.com/nhan-vat/ly-ton-uc"
+        ],
+        "URL": null,
+        "Time": null
+    }
+]

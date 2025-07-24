@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Việt Sử Trí</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Enhanced Menu CSS -->
+    <link rel="stylesheet" href="/static/menu-enhanced.css" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "ui-sans-serif", "system-ui"],
+                        },
+                        colors: {
+                            primary: {
+                                50: "#fef2f2",
+                                500: "#dc2626",
+                                600: "#b91c1c",
+                                700: "#991b1b",
+                            },
+                            gold: {
+                                400: "#fbbf24",
+                                500: "#f59e0b",
+                                600: "#d97706",
+                            },
+                        },
+                    },
+                },
+            };
+    </script>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dots div {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots div:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots div:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .message-animation {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .background-image {
+            background-image: url('../static/images/dragon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .background-overlay {
+            background: linear-gradient(135deg,
+                rgba(127, 29, 29, 0.85) 0%,
+                rgba(153, 27, 27, 0.80) 25%,
+                rgba(185, 28, 28, 0.75) 50%,
+                rgba(217, 119, 6, 0.70) 75%,
+                rgba(146, 64, 14, 0.80) 100%);
+        }
+
+        .vietnam-pattern {
+            position: relative;
+        }
+
+        .vietnam-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Enhanced Header Styles - With Background Image */
+        .header-glow {
+            position: relative;
+            background-image: url('../static/images/lotus.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.1);
+        }
+
+        /* Header overlay for better text readability */
+        .header-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                rgba(127, 29, 29, 0.75) 0%,
+                rgba(153, 27, 27, 0.70) 25%,
+                rgba(185, 28, 28, 0.65) 50%,
+                rgba(217, 119, 6, 0.60) 75%,
+                rgba(146, 64, 14, 0.70) 100%);
+            z-index: 1;
+        }
+
+        /* Ensure header content is above the overlay */
+        .header-glow > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(245, 158, 11, 0.05) 50%,
+                transparent 100%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .title-gradient {
+            background: linear-gradient(135deg,
+                #FFD700 0%,
+                #FFC107 15%,
+                #FFEB3B 30%,
+                #FFF176 45%,
+                #FFEB3B 60%,
+                #FFC107 75%,
+                #FFD700 90%,
+                #F9A825 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 235, 59, 0.6);
+            filter: brightness(1.2) saturate(1.3);
+        }
+
+        .title-shadow {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            color: rgba(220, 38, 38, 0.3);
+            z-index: -1;
+        }
+
+        .slogan-enhanced {
+            background: linear-gradient(90deg,
+                #FFFFFF 0%,
+                #F8F9FA 15%,
+                #FFFFFF 30%,
+                #FFFEF7 45%,
+                #FFFFFF 60%,
+                #F8F9FA 75%,
+                #FFFFFF 90%,
+                #FFFEF7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .header-icon {
+            display: inline-block;
+            animation: pulse 2s infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 195, 0, 0.6));
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .header-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(245, 158, 11, 0.4) 20%,
+                rgba(255, 195, 0, 0.5) 50%,
+                rgba(245, 158, 11, 0.4) 80%,
+                transparent 100%);
+        }
+
+        .header-ornament {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(245, 158, 11, 0.6);
+            font-size: 1.2rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .header-ornament.left {
+            left: 80px;
+            animation-delay: -1s;
+        }
+
+        .header-ornament.right {
+            right: 20px;
+            animation-delay: -2s;
+        }
+
+        /* Menu Styles */
+        .menu-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 30;
+            background: linear-gradient(135deg, rgba(127, 29, 29, 0.9), rgba(153, 27, 27, 0.8));
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            border-radius: 16px;
+            padding: 14px 16px;
+            color: #f59e0b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            min-width: 50px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-button:hover {
+            background: linear-gradient(135deg, rgba(127, 29, 29, 1), rgba(153, 27, 27, 0.95));
+            border-color: rgba(245, 158, 11, 0.8);
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            color: #fbbf24;
+        }
+
+        .menu-button:active {
+            transform: translateY(-50%) scale(1.02);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+            min-width: 280px;
+            background: rgba(127, 29, 29, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .menu-dropdown.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        .menu-item {
+            padding: 12px 16px;
+            color: #fbbf24;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            background: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+            transform: translateX(4px);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item.active {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .menu-item i {
+            width: 18px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Clear Menu Submenu Styles */
+        .clear-submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 4px;
+            min-width: 100%;
+            background: rgba(127, 29, 29, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            pointer-events: none;
+            z-index: 99999;
+        }
+
+        .menu-item.has-submenu:hover .clear-submenu,
+        .clear-submenu:hover {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        /* Add padding to submenu container for easier hover */
+        .menu-item.has-submenu {
+            position: relative;
+        }
+
+        .menu-item.has-submenu::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 100%;
+            height: 12px;
+            background: transparent;
+            z-index: 55;
+        }
+
+        .clear-submenu-item {
+            padding: 10px 14px;
+            color: #fbbf24;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .clear-submenu-item:hover {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        .clear-submenu-item:last-child {
+            border-bottom: none;
+        }
+
+        .clear-submenu-item i {
+            width: 16px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .clear-submenu-item.danger:hover {
+            background: rgba(220, 38, 38, 0.2);
+            color: #fca5a5;
+        }
+
+        /* Arrow indicator for submenu */
+        .menu-item.has-submenu::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free',serif;
+            font-weight: 900;
+            margin-left: auto;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        /* Confirmation Dialog Styles */
+        #confirmationOverlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #confirmationOverlay.active > div {
+            transform: scale(1);
+        }
+
+        /* PDF Upload Styles */
+        .pdf-upload-area {
+            border: 2px dashed rgba(245, 158, 11, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            background: rgba(127, 29, 29, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pdf-upload-area:hover {
+            border-color: rgba(245, 158, 11, 0.7);
+            background: rgba(127, 29, 29, 0.3);
+        }
+
+        .pdf-upload-area.drag-over {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .pdf-file-item {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .pdf-file-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pdf-remove-btn {
+            background: rgba(220, 38, 38, 0.8);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            padding: 4px 8px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .pdf-remove-btn:hover {
+            background: rgba(220, 38, 38, 1);
+        }
+
+        /* Custom Scrollbar for Chat Container */
+        #chatContainer::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #chatContainer::-webkit-scrollbar-track {
+            background: rgba(127, 29, 29, 0.2);
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        #chatContainer::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #dc2626, #f59e0b);
+            border-radius: 8px;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        #chatContainer::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #b91c1c, #d97706);
+        }
+
+        /* Custom Scrollbar for Textarea */
+        #messageInput::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #messageInput::-webkit-scrollbar-track {
+            background: rgba(127, 29, 29, 0.1);
+            border-radius: 6px;
+        }
+
+        #messageInput::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.6), rgba(245, 158, 11, 0.6));
+            border-radius: 6px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        #messageInput::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.8), rgba(245, 158, 11, 0.8));
+        }
+
+        /* Firefox scrollbar styling */
+        #chatContainer {
+            scrollbar-width: thin;
+            scrollbar-color: #dc2626 rgba(127, 29, 29, 0.2);
+        }
+
+        #messageInput {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(220, 38, 38, 0.6) rgba(127, 29, 29, 0.1);
+        }
+
+        /* Smooth scrolling behavior */
+        #chatContainer {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scrollbar on mobile for cleaner look */
+        @media (max-width: 768px) {
+            #chatContainer::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            #messageInput::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            .header-ornament {
+                display: none;
+            }
+
+            .menu-dropdown {
+                min-width: 240px;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .title-gradient {
+                font-size: 2rem;
+            }
+
+            .slogan-enhanced {
+                font-size: 0.75rem;
+            }
+
+            .menu-button {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="background-image min-h-screen text-white font-sans">
+    <!-- Background Overlay -->
+    <div class="background-overlay fixed inset-0 vietnam-pattern"></div>
+
+    <!-- Background Animation -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-10">
+        <div class="absolute top-32 left-10 w-32 h-32 opacity-40 float-animation">
+            <i class="fas fa-landmark text-6xl text-gold-400 drop-shadow-lg"></i>
+        </div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 opacity-60 float-animation" style="animation-delay: -2s;">
+            <i class="fas fa-scroll text-6xl text-red-400 drop-shadow-lg"></i>
+        </div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 opacity-25 float-animation" style="animation-delay: -4s;">
+            <i class="fas fa-torii-gate text-5xl text-gold-500 drop-shadow-lg"></i>
+        </div>
+    </div>
+
+    <div class="relative z-20 flex flex-col h-screen">
+        <!-- Enhanced Header -->
+        <header class="header-glow border-b border-gold-600/30 px-4 py-2 relative">
+            <!-- Menu Button -->
+            <div class="menu-button" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+                <!-- Menu Dropdown -->
+                <div id="menuDropdown" class="menu-dropdown">
+                    <div class="menu-item active" onclick="switchMode('history')">
+                        <i class="fas fa-history"></i>
+                        <span>Chat Lịch Sử</span>
+                    </div>
+                    <div class="menu-item" onclick="switchMode('pdf')">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Chat với PDF</span>
+                    </div>
+                    <div class="menu-item has-submenu" onclick="toggleClearMenu(event)">
+                        <i class="fas fa-trash-alt"></i>
+                        <span>Xóa Chat</span>
+                        <!-- Clear Submenu -->
+                        <div class="clear-submenu">
+                            <div class="clear-submenu-item" onclick="clearHistoryMode(event)">
+                                <i class="fas fa-history"></i>
+                                <span>Xóa Chat Lịch Sử</span>
+                            </div>
+                            <div class="clear-submenu-item" onclick="clearPDFChat(event)">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Xóa Chat PDF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative Ornaments -->
+            <div class="header-ornament left hidden md:block">
+                <i class="fas fa-dragon"></i>
+            </div>
+            <div class="header-ornament right hidden md:block">
+                <i class="fas fa-pagelines"></i>
+            </div>
+            <div class="max-w-4xl mx-auto flex items-center justify-center relative">
+                <div class="text-center">
+                    <!-- Main Title with Enhanced Styling -->
+                    <div class="relative inline-block">
+                        <h1 class="title-gradient text-3xl md:text-4xl leading-tight relative pb-1">
+                            <span class="header-icon">
+                                <i class="fas fa-star-of-david mr-2 text-xl"></i>
+                            </span>
+                            Việt Sử Trí
+                            <span class="header-icon">
+                                <i class="fas fa-star-of-david ml-2 text-xl"></i>
+                            </span>
+                        </h1>
+                    </div>
+                    <!-- Enhanced Slogan -->
+                    <div class="mt-1 flex items-center justify-center space-x-2">
+                        <div class="w-6 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent"></div>
+                        <p class="slogan-enhanced text-xs font-bold tracking-wide text-white/100">
+                            Khám phá di sản văn hóa & lịch sử dân tộc Việt Nam
+                        </p>
+                        <div class="w-6 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative Bottom Border -->
+            <div class="header-border"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex overflow-hidden">
+            <div class="flex-1 flex flex-col w-full">
+                <!-- Chat Messages -->
+                <div id="chatContainer" class="flex-1 overflow-y-auto py-4">
+                    <div id="chatMessages" class="max-w-4xl mx-auto px-4 space-y-4">
+                        <!-- Welcome Message History Mode -->
+                        <div id="historyWelcome" class="flex items-start space-x-4 message-animation">
+                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-gold-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-book-open text-white text-lg"></i>
+                            </div>
+                            <div class="bg-red-800/70 backdrop-blur-sm rounded-2xl p-5 border border-red-700/65 max-w-[85%] shadow-lg shadow-red-900/45">
+                                <div class="text-lg font-bold mb-3 text-gold-300">
+                                    <i class="fas fa-hand-peace mr-2"></i>
+                                    Chào mừng bạn đến với Việt Sử Trí
+                                </div>
+
+                                <!-- Introduction -->
+                                <p class="text-red-100 mb-4 text-sm leading-relaxed">
+                                    Tôi là trợ lý AI chuyên về lịch sử Việt Nam, sẵn sàng giúp bạn khám phá những câu chuyện thú vị về quá khứ hào hùng của dân tộc.
+                                </p>
+
+                                <!-- Features Grid -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                    <div class="feature-card bg-gold-900/30 rounded-lg p-3 border border-gold-400/60">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-shield-alt text-gold-400 mr-2"></i>
+                                            <span class="text-sm font-medium text-gold-200">Chiến tranh & Quân sự</span>
+                                        </div>
+                                        <p class="text-xs text-gold-300">Các cuộc kháng chiến và chiến dịch lịch sử</p>
+                                    </div>
+
+                                    <div class="feature-card bg-gold-900/30 rounded-lg p-3 border border-gold-400/60">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-crown text-gold-400 mr-2"></i>
+                                            <span class="text-sm font-medium text-gold-200">Nhân vật Lịch sử</span>
+                                        </div>
+                                        <p class="text-xs text-gold-300">Các vị vua và anh hùng dân tộc</p>
+                                    </div>
+
+                                    <div class="feature-card bg-gold-900/30 rounded-lg p-3 border border-gold-400/60">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-calendar-alt text-gold-400 mr-2"></i>
+                                            <span class="text-sm font-medium text-gold-200">Giai đoạn Lịch sử</span>
+                                        </div>
+                                        <p class="text-xs text-gold-300">Các triều đại và thời kỳ phát triển</p>
+                                    </div>
+
+                                    <div class="feature-card bg-gold-900/30 rounded-lg p-3 border border-gold-400/60">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-monument text-gold-400 mr-2"></i>
+                                            <span class="text-sm font-medium text-gold-200">Di sản Văn hóa</span>
+                                        </div>
+                                        <p class="text-xs text-gold-300">Truyền thống và di tích lịch sử</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 p-3 bg-gold-900/30 border border-gold-500/40 rounded-lg">
+                                    <div class="text-sm text-gold-200">
+                                        <i class="fas fa-info-circle mr-2 text-gold-400"></i>
+                                        <strong>Tính năng thông minh:</strong> Hệ thống sử dụng AI để tìm kiếm thông tin chính xác và phân tích ngữ cảnh câu hỏi của bạn để đưa ra câu trả lời phù hợp nhất.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Welcome Message PDF Mode -->
+                        <div id="pdfWelcome" class="flex items-start space-x-4 message-animation hidden">
+                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-gold-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-file-pdf text-white text-lg"></i>
+                            </div>
+                            <div class="bg-red-800/70 backdrop-blur-sm rounded-2xl p-5 border border-red-700/65 max-w-[85%] shadow-lg shadow-red-900/45">
+                                <div class="text-lg font-bold mb-3 text-gold-300">
+                                    <i class="fas fa-upload mr-2"></i>
+                                    Khám phá tri thức từ PDF
+                                </div>
+
+                                <p class="text-red-100 mb-4 text-sm leading-relaxed">
+                                    Tải lên các tài liệu PDF và đặt câu hỏi về nội dung bên trong. Hệ thống sẽ phân tích và trả lời dựa trên thông tin trong tài liệu.
+                                </p>
+
+                                <!-- PDF Upload Area -->
+                                <div class="pdf-upload-area mb-4" onclick="triggerFileInput()">
+                                    <i class="fas fa-cloud-upload-alt text-3xl text-gold-400 mb-2"></i>
+                                    <p class="text-gold-300 text-sm font-medium">Nhấn để chọn file PDF</p>
+                                    <p class="text-gold-400 text-xs mt-1">Hoặc kéo thả file vào đây</p>
+                                    <p class="text-gold-500 text-xs mt-2">Hỗ trợ nhiều file PDF cùng lúc</p>
+                                </div>
+
+                                <!-- PDF Files List -->
+                                <div id="pdfFilesList" class="hidden">
+                                    <div class="text-sm text-gold-300 mb-2">
+                                        <i class="fas fa-paperclip mr-1"></i>
+                                        Tài liệu đã tải lên:
+                                    </div>
+                                    <div id="pdfFilesContainer"></div>
+                                </div>
+
+                                <div class="mt-3 p-3 bg-gold-900/30 border border-gold-500/40 rounded-lg">
+                                    <div class="text-sm text-gold-200">
+                                        <i class="fas fa-info-circle mr-2 text-gold-400"></i>
+                                        <strong>Lưu ý:</strong> Chỉ hỗ trợ file PDF. Tối đa 10MB mỗi file. Hệ thống sẽ trích xuất và phân tích nội dung text trong PDF.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="border-t border-red-700/65 bg-red-800/70 backdrop-blur-sm">
+                    <div class="max-w-4xl mx-auto px-4 py-4">
+                        <div class="flex items-center justify-center">
+                            <div class="relative max-w-[85%] w-full">
+                                <label for="messageInput"></label><textarea id="messageInput"
+                                                                            placeholder="Lịch sử Việt Nam ẩn chứa vô vàn điều kỳ thú — bạn đang muốn khám phá điều gì?"
+                                                                            class="w-full p-3 pr-16 bg-red-800/50 border border-red-600/50 rounded-2xl text-white placeholder-red-300 focus:ring-2 focus:ring-gold-500 focus:border-transparent resize-none backdrop-blur-sm transition-all duration-200 text-sm leading-relaxed"
+                                                                            rows="1"
+                                                                            maxlength="1000"></textarea>
+                                <div class="absolute bottom-2 right-3 text-xs text-red-400 pointer-events-none">
+                                    <span id="charCount">0</span>/1000
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center mt-3">
+                            <div class="text-xs text-red-300">
+                                <i class="fas fa-shield-alt mr-1"></i>
+                                <span id="footerText">Thông tin được tổng hợp từ nhiều tài liệu lịch sử, có thể chưa đầy đủ (khuyến khích bạn tìm hiểu thêm từ các nguồn khác).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="pdfFileInput" accept=".pdf" multiple style="display: none;" onchange="handleFileSelect(event)">
+
+    <!-- Loading Indicator -->
+    <div id="typingIndicator" class="hidden flex items-start space-x-4 message-animation">
+        <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-gold-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-book-open text-white text-lg"></i>
+        </div>
+        <div class="bg-red-800/40 backdrop-blur-sm border border-red-700/50 p-4 rounded-2xl flex items-center gap-3">
+            <div class="typing-dots">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <span class="text-red-200 text-sm">Đang tìm kiếm thông tin lịch sử...</span>
+        </div>
+    </div>
+
+    <!-- Confirmation Dialog -->
+    <div id="confirmationOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-red-800/90 backdrop-blur-lg border border-gold-500/50 rounded-2xl p-6 max-w-md mx-4 transform scale-95 transition-all duration-300">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-red-600/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-exclamation-triangle text-gold-400 text-2xl"></i>
+                </div>
+                <h3 id="confirmationTitle" class="text-xl font-bold text-gold-300 mb-2">Xác nhận xóa</h3>
+                <p id="confirmationMessage" class="text-red-100 mb-6 text-sm leading-relaxed">Bạn có chắc chắn muốn thực hiện hành động này?</p>
+                <div class="flex gap-3 justify-center">
+                    <button onclick="hideConfirmation()" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 text-sm">
+                        Hủy
+                    </button>
+                    <button onclick="confirmAction()" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-200 text-sm">
+                        Xác nhận
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

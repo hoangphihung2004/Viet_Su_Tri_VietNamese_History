@@ -1,0 +1,7 @@
+venv/
+draft/
+raw_data/
+.env
+app.log
+.idea/
+qodo/
